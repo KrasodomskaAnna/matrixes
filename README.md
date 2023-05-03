@@ -89,6 +89,7 @@ Podsumowanie
 Należy zauważyć, że metody iteracyjne są znacznie szybsze (jeśli nie stosuje się usprawnienia dla faktoryzacji LU dla pustych pól macierzy), a dokładność obliczonych przez nie wyników można z góry ustalić. W związku z tym dla macierzy, które spełniają warunek zbieżności lepiej jest stosować metody iteracyjne. Dla macierzy niespełniających tego warunku jedynym poprawnym wyborem metody wyznaczenia rozwiązania jest zastosowanie wybranej metody bezpośredniej. Natomiast warto zauważyć, iż dla wspomnianego wcześniej prostego usprawnienia obliczeń, metoda faktoryzacji LU pozwala na znacznie szybsze wyznaczenie rozwiązania dla zadanej macierzy (której wartości były w dużej mierze równe 0).
 
 Źródła
+
 Ratajczak T. (2006), Metody numeryczne: przykłady i zadania, Wydawnictwo Politechniki Gdańskiej
 https://wazniak.mimuw.edu.pl/index.php?title=MN08
 https://pg.edu.pl/documents/1103764/59866917/url_metody_J_GS.pdf
