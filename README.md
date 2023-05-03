@@ -28,11 +28,14 @@ Zadanie B
 
 Porównane zostały metody iteracyjne rozwiązywania układów równań liniowych – tj. metoda Jacobiego oraz Gaussa-Seidla. Z uwagi na fakt, iż wyznaczają one rozwiązanie z góry ustaloną dokładnością – dokładność ta została określona jako wartość normy błędu rezydualnego nie większa niż 10^(-9).
 Program zwrócił poniższe wartości dla danych wejściowych:
-![alt text](https://github.com/[KrasodomskaAnna]/[matrixes]/blob/[main]/chart_1.png?raw=true)
+
+![alt text](https://github.com/KrasodomskaAnna/matrixes/blob/main/chart_1.png?raw=true)
 Wykres 1. Porównanie metod iteracyjnych układów równań liniowych Jacobiego oraz Gaussa-Seidla pod względem liczby potrzebnych iteracji oraz czasu trwania obliczeń dla układu opisanego w zadaniu A.
-![alt text](https://github.com/[KrasodomskaAnna]/[matrixes]/blob/[main]/J_res_err_b.png?raw=true)
+
+![alt text](https://github.com/KrasodomskaAnna/matrixes/blob/main/J_res_err_b.png?raw=true)
 Wykres 2. Wykres wartości błędu rezydualnego dla kolejnych iteracji dla metody Jacobiego dla układu opisanego w zadaniu A.
-![alt text](https://github.com/[KrasodomskaAnna]/[matrixes]/blob/[main]/GS_res_err_b.png?raw=true)
+
+![alt text](https://github.com/KrasodomskaAnna/matrixes/blob/main/GS_res_err_b.png?raw=true)
 Wykres 3. Wykres wartości błędu rezydualnego dla kolejnych iteracji dla metody Gaussa-Seidla dla układu opisanego w zadaniu A.
 
 
@@ -46,31 +49,38 @@ Po zmianie wartości, które zawiera główna diagonala macierzy A na 3, wartoś
 Z uwagi na fakt, iż w pewnym momencie wykonywany algorytm, którego rozwiązanie nie zbiega należy przerwać, w wywołaniu funkcji przekazywany jest parametr określający po której iteracji zostanie zwrócony komunikat "seem to be math.inf". Dla zadanego problemu ustawiono ten parametr na 10^2 (co jest wystarczające dla zadanego problemu).
 
 Program zwrócił poniższe wartości dla danych wejściowych po wykonaniu modyfikacji wartości na głównej diagonali macierzy A:
-![alt text](https://github.com/[KrasodomskaAnna]/[matrixes]/blob/[main]/chart_2.png?raw=true)
+
+![alt text](https://github.com/KrasodomskaAnna/matrixes/blob/main/chart_2.png?raw=true)
 Wykres 4. Porównanie metod iteracyjnych układów równań liniowych Jacobiego oraz Gaussa-Seidla pod względem liczby potrzebnych iteracji oraz czasu trwania obliczeń dla układu opisanego w zadaniu C.
-![alt text](https://github.com/[KrasodomskaAnna]/[matrixes]/blob/[main]/J_res_err_c.png?raw=true)
+
+![alt text](https://github.com/KrasodomskaAnna/matrixes/blob/main/J_res_err_c.png?raw=true)
 Wykres 5. Wykres wartości błędu rezydualnego dla kolejnych iteracji dla metody Jacobiego dla układu opisanego w zadaniu C.
-![alt text](https://github.com/[KrasodomskaAnna]/[matrixes]/blob/[main]/GS_res_err_c.png?raw=true)
+
+![alt text](https://github.com/KrasodomskaAnna/matrixes/blob/main/GS_res_err_c.png?raw=true)
 Wykres 6. Wykres wartości błędu rezydualnego dla kolejnych iteracji dla metody Gaussa-Seidla dla układu opisanego w zadaniu C.
 Zauważamy zatem, iż warunek zbieżności jest niespełniony, oraz, że wartość błędu rezydualnego rośnie wykładniczo dla obydwu metod.
 
 Zadanie D
 Z uwagi na fakt, iż nie otrzymano poprawnego rozwiązania równania dla obydwu metod iteracyjnych – tj. Jacobiego i Gaussa-Seidla, użyto metodę bezpośrednią – metodę faktoryzacji LU w celu znalezienia rozwiązania. Dla metody faktoryzacji LU udało się uzyskać rozwiązanie, gdyż problem rozbieżności nie występuje w przypadku metod bezpośrednich rozwiązywania układów równań liniowych. Jednakże metody bezpośrednie lepiej stosować, gdy metody iteracyjne zawiodą, gdyż metody te wiążą się z dużo większą złożonością obliczeniową, co również skutkuje znacząco dłuższym czasem wykonywania. Należy jednak zauważyć, iż metody bezpośrednie umożliwiają wyznaczenie dokładnego rozwiązania.
 Program zwrócił poniższe wartości dla danych wejściowych po wykonaniu modyfikacji wartości na głównej diagonali macierzy A:
-![alt text](https://github.com/[KrasodomskaAnna]/[matrixes]/blob/[main]/chart_3.png?raw=true)
+
+![alt text](https://github.com/KrasodomskaAnna/matrixes/blob/main/chart_3.png?raw=true)
 Wykres 7. Czas trwania obliczeń oraz wartość normy błędu rezydualnego przy zastosowaniu metody faktoryzacji LU dla układu opisanego w zadaniu C.
 Wartość błędu rezydualnego jest różna od zera z uwagi na zaokrąglenia, które występują w trakcie działania programu i są ściśle związane z ograniczoną liczbą bitów, na których można zapisać liczbę zmiennoprzecinkową. Z uwagi na to, iż wartość ta jest pomijalnie niska, wyznaczone rozwiązanie może zostać uznane za dokładne.
 Zadanie E
 Dla macierzy A opisanej w zadaniu A zostały zaprezentowane wyniki porównania iteracyjnych – Jacobiego i Gaussa-Seidla oraz metody bezpośredniej – faktoryzacji LU. Porównanie te zostało przeprowadzone pod kątem złożoności czasowej w zależności od liczby niewiadomych N (zatem od rozmiaru macierzy A) dla N= {100,500,1000,2000,3000,4000,5000}.
 Wyniki porównania metod rozwiązywania układów równań liniowych:
-![alt text](https://github.com/[KrasodomskaAnna]/[matrixes]/blob/[main]/zadanie_e.png?raw=true)
+
+![alt text](https://github.com/KrasodomskaAnna/matrixes/blob/main/zadanie_e.png?raw=true)
 Wykres 8. Porównanie czasów wykonania algorytmów Jacobiego, Gaussa-Seidla oraz faktoryzacji LU układów liniowych o różnej liczbie niewiadomych N. 
 
 Dla układów równań, w których liczba niewiadomych jest niewielka (N ≤ 1000) czasy trwania metod iteracyjnych jak i metody bezpośredniej są podobne, jednak już po przekroczeniu tej granicy różnica staje się bardzo szybko coraz mocniej znacząca. Czas wykonania metody faktoryzacji LU jest znacząco mniejszy niż metod bezpośrednich z uwagi na zastosowane usprawnienie obliczania jej (jeżeli wartość  L[j,k]=0, to U[j,i] nie ulegnie zmianie – zatem można pominąć ostatnią pętlę for). Z uwagi na fakt, iż algorytmy były porównywane dla macierzy, której większość wartości pól to 0, usprawnienie te przyniosło bardzo dobry rezultat. 
 Wyniki porównania metod rozwiązywania układów równań liniowych bez zastosowania usprawnienia:
-![alt text](https://github.com/[KrasodomskaAnna]/[matrixes]/blob/[main]/500_bez_usprawnien.png?raw=true)
+
+![alt text](https://github.com/KrasodomskaAnna/matrixes/blob/main/500_bez_usprawnien.png?raw=true)
 Wykres 9. Porównanie czasów wykonania algorytmów Jacobiego, Gaussa-Seidla oraz faktoryzacji LU (bez zastosowania usprawnienia) układów liniowych o różnej liczbie niewiadomych N. 
-![alt text](https://github.com/[KrasodomskaAnna]/[matrixes]/blob/[main]/3000_bez_usprawnien.png?raw=true)
+
+![alt text](https://github.com/KrasodomskaAnna/matrixes/blob/main/3000_bez_usprawnien.png?raw=true)
 Wykres 10. Porównanie czasów wykonania algorytmów Jacobiego, Gaussa-Seidla oraz faktoryzacji LU (bez zastosowania usprawnienia) układów liniowych o różnej liczbie niewiadomych N. 
 
 Bez zastosowania wspomnianego usprawnienia czas obliczeń dla faktoryzacji LU rośnie gwałtownie w górę. Należy zauważyć, że już dla N=500 czas faktoryzacji LU (bez usprawnienia) wynosi ponad 14 s, gdzie dla obydwu metod iteracyjnych nie przekracza on 2s, natomiast dla N=3000 dla faktoryzacji LU czas wynosi ponad 3000s (50 min), gdzie czas dla metod iteracyjnych jest znikomy.
@@ -79,7 +89,6 @@ Podsumowanie
 Należy zauważyć, że metody iteracyjne są znacznie szybsze (jeśli nie stosuje się usprawnienia dla faktoryzacji LU dla pustych pól macierzy), a dokładność obliczonych przez nie wyników można z góry ustalić. W związku z tym dla macierzy, które spełniają warunek zbieżności lepiej jest stosować metody iteracyjne. Dla macierzy niespełniających tego warunku jedynym poprawnym wyborem metody wyznaczenia rozwiązania jest zastosowanie wybranej metody bezpośredniej. Natomiast warto zauważyć, iż dla wspomnianego wcześniej prostego usprawnienia obliczeń, metoda faktoryzacji LU pozwala na znacznie szybsze wyznaczenie rozwiązania dla zadanej macierzy (której wartości były w dużej mierze równe 0).
 
 Źródła
-
 Ratajczak T. (2006), Metody numeryczne: przykłady i zadania, Wydawnictwo Politechniki Gdańskiej
 https://wazniak.mimuw.edu.pl/index.php?title=MN08
 https://pg.edu.pl/documents/1103764/59866917/url_metody_J_GS.pdf
