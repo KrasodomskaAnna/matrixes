@@ -14,11 +14,8 @@ Pierwsza klasa metod pozwala na uzyskanie rozwiązania po skończonej (a nawet o
 Druga klasa metod polega na wyznaczeniu ciągu wektorów x_0,x_1,x_2,… x_n zbieżnego do rozwiązania układu. Wyznaczone rozwiązanie obarczone jest nie tylko błędami zaokrągleń, lecz także błędem metody – zatem jest przybliżone. Jednakże dużą zaletą metod iteracyjnych jest fakt, iż pozwalają one wyznaczyć rozwiązanie z dowolną, z góry ustaloną dokładnością. Przykładami takich metod są między innymi: metoda Jacobiego, metoda Gaussa-Seidela, metoda najszybszego spadku czy metoda Czebyszewa.
 
 Temat zagadnień
-
 W pracy tej porównane będą metody iteracyjne Jacobiego i Gaussa-Seidla oraz metoda bezpośrednia - metoda faktoryzacji LU.  Porównywane będą one pod względem wydajności oraz rezultatów otrzymanych wyników (zastosowano normę drugą 〖|(|e|)|  〗_2= √(∑_(j=1)^n▒e_j^2 )). Układy równań, dla których wykonywane są obliczenia mają postać 
-
 Ax=b,
-
 gdzie
 A – macierz systemowa,
 b – wektor pobudzenia,
@@ -46,11 +43,11 @@ Zauważalne jest, iż znajdowanie rozwiązania metodą Gaussa-Seidla trwa o ok 3
 
 
 Zadanie C
-
 Po zmianie wartości, które zawiera główna diagonala macierzy A na 3, wartość błędu rezydualnego dla obydwu metod iteracyjnych zaczyna rosnąć – a w związku z tym oddalać się od wartości rzeczywistej. Oznacza to, iż doszło do rozbieżności. Zbieżność obu analizowanych metod, jak również innych metod iteracyjnych zależy od własności macierzy A. Należy zauważyć, iż
 	Jacobi zbiega się, jeżeli promień symetralny macierzy D^(-1) (L+U)<1, a macierz A jest diagonalnie dominująca
 	Gauss-Seidel zbiega się, jeżeli macierz A jest symetryczna i dodatnio określona oraz jest diagonalnie dominująca |a_ii |> ∑_(j≠i)▒|a_ij | .
 Z uwagi na fakt, iż w pewnym momencie wykonywany algorytm, którego rozwiązanie nie zbiega należy przerwać, w wywołaniu funkcji przekazywany jest parametr określający po której iteracji zostanie zwrócony komunikat "seem to be math.inf". Dla zadanego problemu ustawiono ten parametr na 10^2 (co jest wystarczające dla zadanego problemu).
+
 Program zwrócił poniższe wartości dla danych wejściowych po wykonaniu modyfikacji wartości na głównej diagonali macierzy A:
 ![alt text](https://github.com/[KrasodomskaAnna]/[matrixes]/blob/[main]/chart_2.png?raw=true)
 Wykres 4. Porównanie metod iteracyjnych układów równań liniowych Jacobiego oraz Gaussa-Seidla pod względem liczby potrzebnych iteracji oraz czasu trwania obliczeń dla układu opisanego w zadaniu C.
@@ -83,6 +80,7 @@ Bez zastosowania wspomnianego usprawnienia czas obliczeń dla faktoryzacji LU ro
 Porównując algorytmy iteracyjne należy zauważyć, że dla zwiększającej się liczby niewiadomych, coraz bardziej znaczące jest wykorzystanie w obliczeniach dotychczas obliczonych wartości (a nie tych z poprzedniej iteracji). Można oczekiwać, że dla coraz większych N różnica ta będzie coraz bardziej znacząca.
 Podsumowanie
 Należy zauważyć, że metody iteracyjne są znacznie szybsze (jeśli nie stosuje się usprawnienia dla faktoryzacji LU dla pustych pól macierzy), a dokładność obliczonych przez nie wyników można z góry ustalić. W związku z tym dla macierzy, które spełniają warunek zbieżności lepiej jest stosować metody iteracyjne. Dla macierzy niespełniających tego warunku jedynym poprawnym wyborem metody wyznaczenia rozwiązania jest zastosowanie wybranej metody bezpośredniej. Natomiast warto zauważyć, iż dla wspomnianego wcześniej prostego usprawnienia obliczeń, metoda faktoryzacji LU pozwala na znacznie szybsze wyznaczenie rozwiązania dla zadanej macierzy (której wartości były w dużej mierze równe 0).
+
 Źródła
 Ratajczak T. (2006), Metody numeryczne: przykłady i zadania, Wydawnictwo Politechniki Gdańskiej
 https://wazniak.mimuw.edu.pl/index.php?title=MN08
