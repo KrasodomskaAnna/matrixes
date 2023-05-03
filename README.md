@@ -1,7 +1,4 @@
 # matrixes
-project for university MN
-
-
 Układy równań liniowych
 Macierze są stosowane praktycznie we wszystkich dziedzinach nauki takich jak na przykład elektronice, elektrodynamice, matematyce (np. teorii gier, geometrii analitycznej), grafice komputerowej, mechanice, badaniu wytrzymałości materiałów i konstrukcji, różnego typu symulacji, ekonomii (np. macierz wypłat), akustyce, fotonice, termodynamice, dynamice płynów etc. Używane są w celu uproszczenia rozwiązywania układów równań liniowych. Zatem niezależnie od dziedziny nauki, są one powszechnie wykorzystywane i stanowią podstawowe narzędzie matematyczne. Ponadto, z uwagi na coraz częstszą potrzebę rozwiązywania równań dla układów zawierających setki milionów niewiadomych bardzo ważnym jest, aby były opracowywane nowe metody mające na celu przyspieszenie wykonywania obliczeń. Zagadnienie te jest przedmiotem badań wielu ośrodków naukowych, gdyż rozwój wyżej wymienionych dziedzin jest od niego zależny.
 
@@ -82,6 +79,7 @@ Podsumowanie
 Należy zauważyć, że metody iteracyjne są znacznie szybsze (jeśli nie stosuje się usprawnienia dla faktoryzacji LU dla pustych pól macierzy), a dokładność obliczonych przez nie wyników można z góry ustalić. W związku z tym dla macierzy, które spełniają warunek zbieżności lepiej jest stosować metody iteracyjne. Dla macierzy niespełniających tego warunku jedynym poprawnym wyborem metody wyznaczenia rozwiązania jest zastosowanie wybranej metody bezpośredniej. Natomiast warto zauważyć, iż dla wspomnianego wcześniej prostego usprawnienia obliczeń, metoda faktoryzacji LU pozwala na znacznie szybsze wyznaczenie rozwiązania dla zadanej macierzy (której wartości były w dużej mierze równe 0).
 
 Źródła
+
 Ratajczak T. (2006), Metody numeryczne: przykłady i zadania, Wydawnictwo Politechniki Gdańskiej
 https://wazniak.mimuw.edu.pl/index.php?title=MN08
 https://pg.edu.pl/documents/1103764/59866917/url_metody_J_GS.pdf
