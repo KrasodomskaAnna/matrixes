@@ -16,16 +16,22 @@ Druga klasa metod polega na wyznaczeniu ciągu wektorów x_0,x_1,x_2,… x_n zbi
 Temat zagadnień
 
 W pracy tej porównane będą metody iteracyjne Jacobiego i Gaussa-Seidla oraz metoda bezpośrednia - metoda faktoryzacji LU.  Porównywane będą one pod względem wydajności oraz rezultatów otrzymanych wyników (zastosowano normę drugą 〖|(|e|)|  〗_2= √(∑_(j=1)^n▒e_j^2 )). Układy równań, dla których wykonywane są obliczenia mają postać 
+
 Ax=b,
+
 gdzie
 A – macierz systemowa,
 b – wektor pobudzenia,
 A – wektor rozwiązań reprezentujący szukaną wielkość fizyczną.
  
+ 
 Zadanie A
+
 Rozpatrywany był układ dla macierzy A o rozmiarze 963x963 posiadającej pięć diagonali: główną, z elementami równymi 13 oraz dwoma poniżej jak i powyżej głównej diagonali, z których każda zawierała elementy równe -1. Natomiast wektor b (o długości 963) zawierał elementy 
 b_n=  sin⁡〖(n∙9)〗,n= 0,1,2,…963.
+
 Zadanie B
+
 Porównane zostały metody iteracyjne rozwiązywania układów równań liniowych – tj. metoda Jacobiego oraz Gaussa-Seidla. Z uwagi na fakt, iż wyznaczają one rozwiązanie z góry ustaloną dokładnością – dokładność ta została określona jako wartość normy błędu rezydualnego nie większa niż 10^(-9).
 Program zwrócił poniższe wartości dla danych wejściowych:
 ![alt text](https://github.com/[KrasodomskaAnna]/[matrixes]/blob/[main]/chart_1.png?raw=true)
@@ -35,8 +41,12 @@ Wykres 2. Wykres wartości błędu rezydualnego dla kolejnych iteracji dla metod
 ![alt text](https://github.com/[KrasodomskaAnna]/[matrixes]/blob/[main]/GS_res_err_b.png?raw=true)
 Wykres 3. Wykres wartości błędu rezydualnego dla kolejnych iteracji dla metody Gaussa-Seidla dla układu opisanego w zadaniu A.
 
+
 Zauważalne jest, iż znajdowanie rozwiązania metodą Gaussa-Seidla trwa o ok 30% szybciej niż metodą Jacobiego. Podobna zależność dotyczy liczby iteracji. Dużo krótszy czas wykonania, jak i liczba iteracji dla metody Gaussa-Seidla jest zgodny z oczekiwaniami, gdyż wspomniany algorytm jest modyfikacją algorytmu Jacobiego polegającą na tym, iż do wyznaczania kolejnych wartości wektora rozwiązania wykorzystuje się obliczone dotychczas wartości (również te z bieżącej iteracji – zatem najbardziej „aktualne”). Zauważalna jest przez to także różnica w wartości błędu rezydualnego na powyższych wykresach – dla metody Jacobiego wartość błędu wynosi niewiele ponad 0 (niezauważalnie dla oka ludzkiego na powyższych wykresach) od iteracji = 5, natomiast dla metody Gaussa-Seidla już od iteracji = 4. W metodzie Jacobiego natomiast wykorzystywany jest w całości wektor uzyskany w wyniku poprzedniej iteracji. Ze względu na fakt, iż jedyną różnicą w działaniu wymienionych metod dla macierzy gęstych jest ta wspomniana, oczekiwane było skrócenie czasu obliczeń (nawet pomimo dodatkowego kosztu poniesionego poprzez wywołanie drugiej pętli for – jak zaimplementowano - lub rozbiciu jej na dwa warunki if). W powyższym przypadku zastosowanie metody Gaussa-Seidla spowodowało przyspieszenie obliczeń o ok 33%.
+
+
 Zadanie C
+
 Po zmianie wartości, które zawiera główna diagonala macierzy A na 3, wartość błędu rezydualnego dla obydwu metod iteracyjnych zaczyna rosnąć – a w związku z tym oddalać się od wartości rzeczywistej. Oznacza to, iż doszło do rozbieżności. Zbieżność obu analizowanych metod, jak również innych metod iteracyjnych zależy od własności macierzy A. Należy zauważyć, iż
 	Jacobi zbiega się, jeżeli promień symetralny macierzy D^(-1) (L+U)<1, a macierz A jest diagonalnie dominująca
 	Gauss-Seidel zbiega się, jeżeli macierz A jest symetryczna i dodatnio określona oraz jest diagonalnie dominująca |a_ii |> ∑_(j≠i)▒|a_ij | .
