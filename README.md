@@ -4,12 +4,17 @@ project for university MN
 
 Układy równań liniowych
 Macierze są stosowane praktycznie we wszystkich dziedzinach nauki takich jak na przykład elektronice, elektrodynamice, matematyce (np. teorii gier, geometrii analitycznej), grafice komputerowej, mechanice, badaniu wytrzymałości materiałów i konstrukcji, różnego typu symulacji, ekonomii (np. macierz wypłat), akustyce, fotonice, termodynamice, dynamice płynów etc. Używane są w celu uproszczenia rozwiązywania układów równań liniowych. Zatem niezależnie od dziedziny nauki, są one powszechnie wykorzystywane i stanowią podstawowe narzędzie matematyczne. Ponadto, z uwagi na coraz częstszą potrzebę rozwiązywania równań dla układów zawierających setki milionów niewiadomych bardzo ważnym jest, aby były opracowywane nowe metody mające na celu przyspieszenie wykonywania obliczeń. Zagadnienie te jest przedmiotem badań wielu ośrodków naukowych, gdyż rozwój wyżej wymienionych dziedzin jest od niego zależny.
+
 Metody rozwiązania układów równań liniowych dzieli się na dwie klasy:
 	Metody bezpośrednie (inaczej skończone) 
 	Metody iteracyjne.
+	
 Pierwsza klasa metod pozwala na uzyskanie rozwiązania po skończonej (a nawet określonej) liczbie działań arytmetycznych a wyznaczone rozwiązanie obarczone jest tylko błędami zaokrągleń. Przykładami takich metod są między innymi: metoda wyznaczników Cramera, metoda eliminacji Gaussa, metoda faktoryzacji LU, metoda QR.
+
 Druga klasa metod polega na wyznaczeniu ciągu wektorów x_0,x_1,x_2,… x_n zbieżnego do rozwiązania układu. Wyznaczone rozwiązanie obarczone jest nie tylko błędami zaokrągleń, lecz także błędem metody – zatem jest przybliżone. Jednakże dużą zaletą metod iteracyjnych jest fakt, iż pozwalają one wyznaczyć rozwiązanie z dowolną, z góry ustaloną dokładnością. Przykładami takich metod są między innymi: metoda Jacobiego, metoda Gaussa-Seidela, metoda najszybszego spadku czy metoda Czebyszewa.
+
 Temat zagadnień
+
 W pracy tej porównane będą metody iteracyjne Jacobiego i Gaussa-Seidla oraz metoda bezpośrednia - metoda faktoryzacji LU.  Porównywane będą one pod względem wydajności oraz rezultatów otrzymanych wyników (zastosowano normę drugą 〖|(|e|)|  〗_2= √(∑_(j=1)^n▒e_j^2 )). Układy równań, dla których wykonywane są obliczenia mają postać 
 Ax=b,
 gdzie
