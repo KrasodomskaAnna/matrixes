@@ -1,5 +1,5 @@
 # matrixes
-Układy równań liniowych
+<b>Układy równań liniowych</b><br>
 Macierze są stosowane praktycznie we wszystkich dziedzinach nauki takich jak na przykład elektronice, elektrodynamice, matematyce (np. teorii gier, geometrii analitycznej), grafice komputerowej, mechanice, badaniu wytrzymałości materiałów i konstrukcji, różnego typu symulacji, ekonomii (np. macierz wypłat), akustyce, fotonice, termodynamice, dynamice płynów etc. Używane są w celu uproszczenia rozwiązywania układów równań liniowych. Zatem niezależnie od dziedziny nauki, są one powszechnie wykorzystywane i stanowią podstawowe narzędzie matematyczne. Ponadto, z uwagi na coraz częstszą potrzebę rozwiązywania równań dla układów zawierających setki milionów niewiadomych bardzo ważnym jest, aby były opracowywane nowe metody mające na celu przyspieszenie wykonywania obliczeń. Zagadnienie te jest przedmiotem badań wielu ośrodków naukowych, gdyż rozwój wyżej wymienionych dziedzin jest od niego zależny.
 
 Metody rozwiązania układów równań liniowych dzieli się na dwie klasy:
@@ -10,7 +10,7 @@ Pierwsza klasa metod pozwala na uzyskanie rozwiązania po skończonej (a nawet o
 
 Druga klasa metod polega na wyznaczeniu ciągu wektorów x_0,x_1,x_2,… x_n zbieżnego do rozwiązania układu. Wyznaczone rozwiązanie obarczone jest nie tylko błędami zaokrągleń, lecz także błędem metody – zatem jest przybliżone. Jednakże dużą zaletą metod iteracyjnych jest fakt, iż pozwalają one wyznaczyć rozwiązanie z dowolną, z góry ustaloną dokładnością. Przykładami takich metod są między innymi: metoda Jacobiego, metoda Gaussa-Seidela, metoda najszybszego spadku czy metoda Czebyszewa.
 
-Temat zagadnień
+<b>Temat zagadnień</b><br>
 W pracy tej porównane będą metody iteracyjne Jacobiego i Gaussa-Seidla oraz metoda bezpośrednia - metoda faktoryzacji LU.  Porównywane będą one pod względem wydajności oraz rezultatów otrzymanych wyników (zastosowano normę drugą 〖|(|e|)|  〗_2= √(∑_(j=1)^n▒e_j^2 )). Układy równań, dla których wykonywane są obliczenia mają postać 
 Ax=b,
 gdzie
@@ -19,12 +19,12 @@ b – wektor pobudzenia,
 A – wektor rozwiązań reprezentujący szukaną wielkość fizyczną.
  
  
-Zadanie A
+<b>Zadanie A</b><br>
 
 Rozpatrywany był układ dla macierzy A o rozmiarze 963x963 posiadającej pięć diagonali: główną, z elementami równymi 13 oraz dwoma poniżej jak i powyżej głównej diagonali, z których każda zawierała elementy równe -1. Natomiast wektor b (o długości 963) zawierał elementy 
 b_n=  sin⁡〖(n∙9)〗,n= 0,1,2,…963.
 
-Zadanie B
+<b>Zadanie B</b><br>
 
 Porównane zostały metody iteracyjne rozwiązywania układów równań liniowych – tj. metoda Jacobiego oraz Gaussa-Seidla. Z uwagi na fakt, iż wyznaczają one rozwiązanie z góry ustaloną dokładnością – dokładność ta została określona jako wartość normy błędu rezydualnego nie większa niż 10^(-9).
 Program zwrócił poniższe wartości dla danych wejściowych:
@@ -42,7 +42,7 @@ Wykres 3. Wykres wartości błędu rezydualnego dla kolejnych iteracji dla metod
 Zauważalne jest, iż znajdowanie rozwiązania metodą Gaussa-Seidla trwa o ok 30% szybciej niż metodą Jacobiego. Podobna zależność dotyczy liczby iteracji. Dużo krótszy czas wykonania, jak i liczba iteracji dla metody Gaussa-Seidla jest zgodny z oczekiwaniami, gdyż wspomniany algorytm jest modyfikacją algorytmu Jacobiego polegającą na tym, iż do wyznaczania kolejnych wartości wektora rozwiązania wykorzystuje się obliczone dotychczas wartości (również te z bieżącej iteracji – zatem najbardziej „aktualne”). Zauważalna jest przez to także różnica w wartości błędu rezydualnego na powyższych wykresach – dla metody Jacobiego wartość błędu wynosi niewiele ponad 0 (niezauważalnie dla oka ludzkiego na powyższych wykresach) od iteracji = 5, natomiast dla metody Gaussa-Seidla już od iteracji = 4. W metodzie Jacobiego natomiast wykorzystywany jest w całości wektor uzyskany w wyniku poprzedniej iteracji. Ze względu na fakt, iż jedyną różnicą w działaniu wymienionych metod dla macierzy gęstych jest ta wspomniana, oczekiwane było skrócenie czasu obliczeń (nawet pomimo dodatkowego kosztu poniesionego poprzez wywołanie drugiej pętli for – jak zaimplementowano - lub rozbiciu jej na dwa warunki if). W powyższym przypadku zastosowanie metody Gaussa-Seidla spowodowało przyspieszenie obliczeń o ok 33%.
 
 
-Zadanie C
+<b>Zadanie C</b><br>
 Po zmianie wartości, które zawiera główna diagonala macierzy A na 3, wartość błędu rezydualnego dla obydwu metod iteracyjnych zaczyna rosnąć – a w związku z tym oddalać się od wartości rzeczywistej. Oznacza to, iż doszło do rozbieżności. Zbieżność obu analizowanych metod, jak również innych metod iteracyjnych zależy od własności macierzy A. Należy zauważyć, iż
 	Jacobi zbiega się, jeżeli promień symetralny macierzy D^(-1) (L+U)<1, a macierz A jest diagonalnie dominująca
 	Gauss-Seidel zbiega się, jeżeli macierz A jest symetryczna i dodatnio określona oraz jest diagonalnie dominująca |a_ii |> ∑_(j≠i)▒|a_ij | .
@@ -60,14 +60,16 @@ Wykres 5. Wykres wartości błędu rezydualnego dla kolejnych iteracji dla metod
 Wykres 6. Wykres wartości błędu rezydualnego dla kolejnych iteracji dla metody Gaussa-Seidla dla układu opisanego w zadaniu C.
 Zauważamy zatem, iż warunek zbieżności jest niespełniony, oraz, że wartość błędu rezydualnego rośnie wykładniczo dla obydwu metod.
 
-Zadanie D
+<b>Zadanie D</b><br>
 Z uwagi na fakt, iż nie otrzymano poprawnego rozwiązania równania dla obydwu metod iteracyjnych – tj. Jacobiego i Gaussa-Seidla, użyto metodę bezpośrednią – metodę faktoryzacji LU w celu znalezienia rozwiązania. Dla metody faktoryzacji LU udało się uzyskać rozwiązanie, gdyż problem rozbieżności nie występuje w przypadku metod bezpośrednich rozwiązywania układów równań liniowych. Jednakże metody bezpośrednie lepiej stosować, gdy metody iteracyjne zawiodą, gdyż metody te wiążą się z dużo większą złożonością obliczeniową, co również skutkuje znacząco dłuższym czasem wykonywania. Należy jednak zauważyć, iż metody bezpośrednie umożliwiają wyznaczenie dokładnego rozwiązania.
 Program zwrócił poniższe wartości dla danych wejściowych po wykonaniu modyfikacji wartości na głównej diagonali macierzy A:
 
 ![alt text](https://github.com/KrasodomskaAnna/matrixes/blob/main/chart_3.png?raw=true)
 Wykres 7. Czas trwania obliczeń oraz wartość normy błędu rezydualnego przy zastosowaniu metody faktoryzacji LU dla układu opisanego w zadaniu C.
 Wartość błędu rezydualnego jest różna od zera z uwagi na zaokrąglenia, które występują w trakcie działania programu i są ściśle związane z ograniczoną liczbą bitów, na których można zapisać liczbę zmiennoprzecinkową. Z uwagi na to, iż wartość ta jest pomijalnie niska, wyznaczone rozwiązanie może zostać uznane za dokładne.
-Zadanie E
+
+
+<b>Zadanie E</b><br>
 Dla macierzy A opisanej w zadaniu A zostały zaprezentowane wyniki porównania iteracyjnych – Jacobiego i Gaussa-Seidla oraz metody bezpośredniej – faktoryzacji LU. Porównanie te zostało przeprowadzone pod kątem złożoności czasowej w zależności od liczby niewiadomych N (zatem od rozmiaru macierzy A) dla N= {100,500,1000,2000,3000,4000,5000}.
 Wyniki porównania metod rozwiązywania układów równań liniowych:
 
@@ -88,7 +90,7 @@ Porównując algorytmy iteracyjne należy zauważyć, że dla zwiększającej si
 Podsumowanie
 Należy zauważyć, że metody iteracyjne są znacznie szybsze (jeśli nie stosuje się usprawnienia dla faktoryzacji LU dla pustych pól macierzy), a dokładność obliczonych przez nie wyników można z góry ustalić. W związku z tym dla macierzy, które spełniają warunek zbieżności lepiej jest stosować metody iteracyjne. Dla macierzy niespełniających tego warunku jedynym poprawnym wyborem metody wyznaczenia rozwiązania jest zastosowanie wybranej metody bezpośredniej. Natomiast warto zauważyć, iż dla wspomnianego wcześniej prostego usprawnienia obliczeń, metoda faktoryzacji LU pozwala na znacznie szybsze wyznaczenie rozwiązania dla zadanej macierzy (której wartości były w dużej mierze równe 0).
 
-Źródła
+<b>Źródła</b><br>
 
 Ratajczak T. (2006), Metody numeryczne: przykłady i zadania, Wydawnictwo Politechniki Gdańskiej
 https://wazniak.mimuw.edu.pl/index.php?title=MN08
